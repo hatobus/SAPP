@@ -15,14 +15,14 @@ class calcRadiation():
         if city1_loc[0] < city2_loc[0]:
             speed = 800 # 単位はkm/h
             time = self.calc_flight_time(speed, distance)
-            print('{0:.3f}μSv'.format(3.7*0.01*time))
+            # print('{0:.3f}μSv'.format(3.7*0.01*time))
         else:
             speed = 1000  # 単位はkm/h
             time = self.calc_flight_time(speed, distance)
 
 #            print('{0:.3f}μSv'.format(3.7 * 0.01 * time))
-	    di = 3.7 * 0.01 * time
-            return di
+        di = 3.7 * 0.01 * time
+        return di
 
     # 緯度経度を求める
     def geocoding(self,locate):
